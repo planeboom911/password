@@ -1,0 +1,54 @@
+
+.span_2 {
+  grid-column: span 2;
+}
+
+.span_3 {
+  grid-column: span 3;
+}
+
+.span_4 {
+  grid-column: span 4;
+}
+
+button[type="button"] {
+  height: min-content;
+}
+
+.grid.bottom {
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.toast {
+  position: fixed;
+  bottom: 1rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  animation: appear 1000ms ease-in-out;
+}
+
+.toast .inner {
+  background-color: #0007;
+  padding: 0.5rem 2.5rem;
+  border-radius: 2rem;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  10%,90% {
+    opacity: 1; 
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid {
+    row-gap: 0;
+  }
+}

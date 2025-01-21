@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <header class="container">
+    <hgroup>
+      <h1>Password Generator</h1>
+      <p>A custom password generator by @planeboom911</p>
+    </hgroup>
+  </header>
+
+  <main class="container">
+    <section>
+      <h3>Details</h3>
+      <form>
+        <div class="grid bottom">
+          <div class="span_3">
+            <label for="input_masterpass">Master password</label>
+            <input type="password" id="input_masterpass" placeholder="Master password..." required />
+          </div>
+          <button id="btn_show_masterpass" type="button">Show</button>
+        </div>
+
+        <div class="grid bottom">
+          <div class="span_2">
+            <label for="input_appname">Website / App name</label>
+            <input type="text" id="input_appname" placeholder="Application name..." required />
+          </div>
+          <div>
+            <label for="input_length">Length</label>
+            <input type="number" id="input_length" placeholder="Length" min="8" max="64" required />
+          </div>
+          <button type="submit" id="btn_generate">Generate</button>
+        </div>
+      </form>
+    </section>
+
+    <section>
+      <h3>Password</h3>
+      <div class="grid">
+        <input class="span_3" type="text" id="output_pass" readonly>
+        <button type="button" id="btn_copy_output">Copy</button>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
